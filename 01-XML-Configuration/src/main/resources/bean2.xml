@@ -8,17 +8,17 @@
 
 <!--    CONSTRUCTOR INJECTION-->
 <!--    constructor-arg tag is used to for injecting values and pass id of dependency in ref-->
-<!--    <bean id="orderService" class="com.example.xmlconfig.dependencyinjection.OrderService">-->
+<!--    <bean id="orderService" class="com.xmlconfig.dependencyinjection.OrderService">-->
 <!--        <constructor-arg ref="paymentService"/>-->
 <!--    </bean>-->
 
 
 <!--    SETTER INJECTION-->
 <!--    property tag is used for setter injection, name attribute pass setter method name without set and pass id at ref attribute-->
-    <bean id="orderService" class="com.example.xmlconfig.dependencyinjection.OrderService">
+    <bean id="orderService" class="com.xmlconfig.dependencyinjection.OrderService">
         <property name="paymentService" ref="paymentService"/>
     </bean>
 
-    <bean id="paymentService" class="com.example.xmlconfig.dependencyinjection.PaymentService"/>
+    <bean id="paymentService" class="com.xmlconfig.dependencyinjection.PaymentService"/>
 
 </beans>

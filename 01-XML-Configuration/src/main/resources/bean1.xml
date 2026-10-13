@@ -16,7 +16,7 @@
     <!--    The id and name can be different from the class name. By convention, use a meaningful camelCase name for the id, usually based on the class name.-->
     <!--    Here, firstBeanCreation is the bean id, beanCreation and spring are aliases, and the class specifies which object Spring should create.-->
 
-    <bean id = "firstBeanCreation" name = "beanCreation, spring" class = "com.example.xmlconfig.beandefinition.FirstBeanCreation"/>
+    <bean id = "firstBeanCreation" name = "beanCreation, spring" class = "com.xmlconfig.beandefinition.FirstBeanCreation"/>
 
 
 </beans>

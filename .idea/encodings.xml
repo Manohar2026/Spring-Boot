@@ -5,5 +5,7 @@
     <file url="file://$APPLICATION_HOME_DIR$/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/01-XML-Configuration/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/01-XML-Configuration/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/02-Spring-Core/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/02-Spring-Core/src/main/resources" charset="UTF-8" />
   </component>
 </project>

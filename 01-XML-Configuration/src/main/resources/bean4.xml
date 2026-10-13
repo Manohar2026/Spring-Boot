@@ -7,13 +7,13 @@
            https://www.springframework.org/schema/beans/spring-beans.xsd">
 
 
-    <bean id="upiPayment" class="com.example.xmlconfig.inheritancedi.UpiPayment"/>
+    <bean id="upiPayment" class="com.xmlconfig.inheritancedi.UpiPayment"/>
 
 <!--    Prototype scope means the bean will be created than it is required, it is lazy initialization-->
-    <bean id="cardPayment" class="com.example.xmlconfig.inheritancedi.CardPayment" scope="prototype"/>
+    <bean id="cardPayment" class="com.xmlconfig.inheritancedi.CardPayment" scope="prototype"/>
 
 <!--    Here we can pass either upi id or card id, depending upon our requirement-->
-    <bean id="order" class="com.example.xmlconfig.inheritancedi.Order">
+    <bean id="order" class="com.xmlconfig.inheritancedi.Order">
         <constructor-arg ref="upiPayment"/>
     </bean>
 

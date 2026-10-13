@@ -7,7 +7,7 @@
            https://www.springframework.org/schema/beans/spring-beans.xsd">
 
 <!--    Index are mapped to constructor parameters in order, where index 0 is the first parameter-->
-    <bean id="student" class="com.example.xmlconfig.complexbeandefinition.Student">
+    <bean id="student" class="com.xmlconfig.complexbeandefinition.Student">
         <constructor-arg index="0" value="Rohit"/>
         <constructor-arg index="1" value="18"/>
         <constructor-arg>
@@ -20,7 +20,7 @@
     </bean>
 
 <!--    Name are mapped to constructor parameters, where name values are parameter name itself-->
-<!--    <bean id="student" class="com.example.xmlconfig.complexbeandefinition.Student">-->
+<!--    <bean id="student" class="com.xmlconfig.complexbeandefinition.Student">-->
 <!--        <constructor-arg name="name" value="Rohit"/>-->
 <!--        <constructor-arg name="age" value="18"/>-->
 <!--        <constructor-arg>-->

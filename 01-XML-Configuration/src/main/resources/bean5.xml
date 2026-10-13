@@ -7,6 +7,6 @@
            https://www.springframework.org/schema/beans/spring-beans.xsd">
 
 <!--    init-method is called after constructor and destroy method is called after all the work is done/context is closed when bean is destroyed-->
-    <bean id="userService" class="com.example.xmlconfig.initdestroy.UserService" init-method="init" destroy-method="destroy"/>
+    <bean id="userService" class="com.xmlconfig.initdestroy.UserService" init-method="init" destroy-method="destroy"/>
 
 </beans>
