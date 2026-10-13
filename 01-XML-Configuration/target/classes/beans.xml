@@ -6,6 +6,36 @@
            http://www.springframework.org/schema/beans
            https://www.springframework.org/schema/beans/spring-beans.xsd">
 
-    <bean id = "orderService" class = "com.example.xmlconfig.OrderService"/>
+
+<!--    To make the IoC container manage our objects, we need to provide Spring with information about which objects it needs to manage.-->
+<!--    We do this using the <bean/> and <bean></bean> tags in the XML configuration file.-->
+
+<!--    id: A unique identifier used to identify the bean.-->
+<!--    name: Optional attribute used to assign additional names (aliases) to the same bean. Multiple aliases can be separated by commas.-->
+<!--    class: The fully qualified class name (package name + class name) of the object Spring needs to create and manage.-->
+
+<!--    The id and name can be different from the class name. By convention, use a meaningful camelCase name for the id, usually based on the class name.-->
+<!--    Here, orderService is the bean id, orderService2 and spring are aliases, and the class specifies which object Spring should create.-->
+
+    <bean id = "orderServie1" name = "orderService2, spring" class = "com.example.xmlconfig.OrderService"/>
+
+<!--    constructor-arg tag is used to for injecting values and pass id of dependency in ref-->
+<!--    property tage is used for setter injection, name attribute pass setter method name without set and pass id at ref attribute-->
+    <bean id = "orderService" class = "com.example.xmlconfig.OrderService">
+<!--        <constructor-arg ref="paymentService"/>-->
+        <property name="paymentService" ref="paymentService"/>
+    </bean>
+
+<!--    We can also pass value for certain datatypes in constructor and can use index to map or use name to map directly by variable name.-->
+    <bean id = "paymentService" class="com.example.xmlconfig.PaymentService">
+        <constructor-arg name="greet" value="Hello"/>
+        <constructor-arg index="0" value="Spring"/>
+    </bean>
+
+
+
+<!--    Important Note:-->
+<!--    1) Beans are created to respect to their dependencies, if one bean is dependent on other bean the dependency bean will be created first and will be injected while created the other bean.-->
+<!--    2)-->
 
 </beans>
