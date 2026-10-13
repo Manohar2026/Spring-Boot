@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+           http://www.springframework.org/schema/beans
+           https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!--    To make the IoC container manage our objects, we need to provide Spring with information about which objects it needs to manage.-->
+    <!--    We do this using the <bean/> and <bean></bean> tags in the XML configuration file.-->
+
+    <!--    id: A unique identifier used to identify the bean.-->
+    <!--    name: Optional attribute used to assign additional names (aliases) to the same bean. Multiple aliases can be separated by commas.-->
+    <!--    class: The fully qualified class name (package name + class name) of the object Spring needs to create and manage.-->
+
+    <!--    The id and name can be different from the class name. By convention, use a meaningful camelCase name for the id, usually based on the class name.-->
+    <!--    Here, firstBeanCreation is the bean id, beanCreation and spring are aliases, and the class specifies which object Spring should create.-->
+
+    <bean id = "firstBeanCreation" name = "beanCreation, spring" class = "com.example.xmlconfig.beandefinition.FirstBeanCreation"/>
+
+
+</beans>
