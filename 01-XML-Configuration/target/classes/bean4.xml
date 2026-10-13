@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+           http://www.springframework.org/schema/beans
+           https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+    <bean id="upiPayment" class="com.example.xmlconfig.inheritancedi.UpiPayment"/>
+
+<!--    Prototype scope means the bean will be created than it is required, it is lazy initialization-->
+    <bean id="cardPayment" class="com.example.xmlconfig.inheritancedi.CardPayment" scope="prototype"/>
+
+<!--    Here we can pass either upi id or card id, depending upon our requirement-->
+    <bean id="order" class="com.example.xmlconfig.inheritancedi.Order">
+        <constructor-arg ref="upiPayment"/>
+    </bean>
+
+</beans>
