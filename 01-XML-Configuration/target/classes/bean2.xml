@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+           http://www.springframework.org/schema/beans
+           https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+<!--    CONSTRUCTOR INJECTION-->
+<!--    constructor-arg tag is used to for injecting values and pass id of dependency in ref-->
+<!--    <bean id="orderService" class="com.example.xmlconfig.dependencyinjection.OrderService">-->
+<!--        <constructor-arg ref="paymentService"/>-->
+<!--    </bean>-->
+
+
+<!--    SETTER INJECTION-->
+<!--    property tag is used for setter injection, name attribute pass setter method name without set and pass id at ref attribute-->
+    <bean id="orderService" class="com.example.xmlconfig.dependencyinjection.OrderService">
+        <property name="paymentService" ref="paymentService"/>
+    </bean>
+
+    <bean id="paymentService" class="com.example.xmlconfig.dependencyinjection.PaymentService"/>
+
+</beans>

@@ -8,16 +8,8 @@
 
 
 
-
-<!--    constructor-arg tag is used to for injecting values and pass id of dependency in ref-->
-<!--    property tage is used for setter injection, name attribute pass setter method name without set and pass id at ref attribute-->
-    <bean id = "orderService" class = "com.example.xmlconfig.OrderService">
-<!--        <constructor-arg ref="paymentService"/>-->
-        <property name="paymentService" ref="paymentService"/>
-    </bean>
-
 <!--    We can also pass value for certain datatypes in constructor and can use index to map or use name to map directly by variable name.-->
-    <bean id = "paymentService" class="com.example.xmlconfig.PaymentService" scope="prototype">
+    <bean id = "paymentService" class="com.example.xmlconfig.dependencyinjection.PaymentService" scope="prototype">
         <constructor-arg name="greet" value="Hello"/>
         <constructor-arg index="0" value="Spring"/>
         <constructor-arg name="names">

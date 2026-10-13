@@ -1,24 +1,20 @@
-package com.example.xmlconfig;
-
-import org.springframework.core.annotation.Order;
+package com.example.xmlconfig.dependencyinjection;
 
 public class OrderService {
 
     private PaymentService paymentService;
 
-    public OrderService() {
-
-    }
-
+//    CONSTRUCTOR INJECTION
 //    public OrderService(PaymentService paymentService) {
 //        this.paymentService = paymentService;
 //    }
 
+//    SETTER INJECTION
     public void setPaymentService(PaymentService paymentService) {
         this.paymentService = paymentService;
     }
 
-    void print() {
+    public void placeOrder() {
         paymentService.pay();
         System.out.println("Order Placed");
     }
